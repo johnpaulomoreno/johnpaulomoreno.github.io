@@ -1,0 +1,1357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philtaxes</title>
+    <link rel="icon" href="image/PhilTaxes.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/web_global.css">
+    <link rel="stylesheet" href="assets/css/mainstyle.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/dashboard/profile.css">
+    <link rel="stylesheet" href="assets/css/dashboard/video.css">
+    <link rel="stylesheet" href="assets/css/dashboard/article.css">
+    <link rel="stylesheet" href="assets/css/dashboard/community.css">
+    <link rel="stylesheet" href="assets/css/dashboard/taxupdate.css">
+    <link rel="stylesheet" href="assets/css/dashboard/quiz.css">
+    <link rel="stylesheet" href="assets/css/dashboard/navbar.css">
+    <link rel="stylesheet" href="assets/css/dashboard/taxcalendar.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans&family=Roboto+Condensed&display=swap" rel="stylesheet">
+
+    <script src="assets/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/taxcalendar.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="assets/js/sidebar/sidebar.js"></script>
+    <script src="assets/js/index.js"></script>
+    <script src="js/sidebar/dashboardmobile.js"></script>
+</head>
+
+<body>
+    <div class="top m-none">
+        <nav class="navbar navbar-expand-lg m-none">
+            <div class="container">
+                <a class="navbar-brand" href="#"> <img src="assets/image/PhilTaxes.png" width="30" class="logo"> <span
+                        class="logo-title" style="color: white">Philtaxes</span></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse d-md-none" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ml-auto">
+                        <a class="nav-link active" aria-current="page" href="#">My Review</a>
+                        <a class="nav-link" href="#">My Personal</a>
+                        <a class="nav-link" href="#">My Business</a>
+                        <a class="nav-link" href="#"> <img src="assets/image/collen1.jpeg" class="rounded-circle"
+                                width="30"></a>
+                        <li class="nav-item dropdown ">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-expanded="false"></a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: white">
+                                <li><a class="dropdown-item" href="signup.html">Log out</a></li>
+                            </ul>
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <nav class="navbar py-0 bg-primary navbar-expand-lg py-md-0 d-md-none "
+        style="background-color: #53CAF1 !important;z-index:1040">
+        <div class="container">
+            <div class="navbar-holder navbar-dark d-flex align-items-center justify-content-between ">
+                <div class="navbar-header">
+                    <a href="/" class="navbar-brand" style="color:white">
+                        <div class="brand-text"><img src="assets/image/PhilTaxes.png" alt="Company Logo" width="30"
+                                height="30">
+                            &nbsp;&nbsp;<strong>PHIL</strong>taxes </div>
+                    </a>
+                </div>
+
+                <div class="d-md-none text-white">
+                    <span class=" fa fa-search mx-2"></span>
+                    <span class="fa fa-bell"></span>
+                    <button class="navbar-toggler " type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                </div>
+
+                <div class="m-none">
+                    <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center" style="color:white;">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link f-12 mr-2">
+                                My Reviewer
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link f-12 btn-nav-active  mr-2">
+                                My Personal
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link f-12 btn-nav btn-nav navData">
+                                My Business
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a id="languages" rel="nofollow" data-toggle="dropdown"
+                                class="nav-link f-12 btn-nav language pt-1 dropdown-toggle">
+                                <span style="width:17px;height:17px;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="17px" height="17px"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-user">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="12" cy="7" r="4"></circle>
+                                    </svg>
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a rel="nofollow" href="s" class="dropdown-item">Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-12 pl-0 pr-0">
+            <div class="collapse mb-3 d-md-none" id="navbarSupportedContent">
+                <div class="nav-line"></div>
+                <ul class="navbar-nav ml-auto nav">
+                    <li class="nav-item @yield('home') mt-3">
+                        <a class="nav-linksys btn-dashboard">Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-linksys btn-video" >Video</a>
+                    </li>
+                    <li>
+                        <a class="nav-linksys btn-article">Article</a>
+                    </li>
+                    <li>
+                        <a class="nav-linksys btn-community">Community</a>
+                    </li>
+                    <li>
+                        <a class="nav-linksys btn-taxUpdate">Tax Update</a>
+                    </li>
+                    <li>
+                        <a class="nav-linksys btn-calendar">Tax Calendar</a>
+                    </li>
+                    <li>
+                        <a class="nav-linksys btn-question">Question of the day</a>
+                    </li>   
+                   <!-- <hr class=""> -->
+                    <li>
+                        <a href="login.html" class="nav-linksys btn-question log-out-button">log out</a>
+                    </li>   
+                </ul>
+                
+            </div>
+        </div>
+        
+    </nav>
+    <nav class="navbar  py-0 bg-primary navbar-expand-lg py-md-0 sticky-top" id="nav1-web"
+        style="background-color: #33B6E1 !important">
+        <div class="container">
+            <div class="navbar-holder d-flex align-items-center justify-content-between">
+                <div class="navbar-header task">
+                    <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center" style="color:white;">
+                        <li class="nav-item mt-1 ">
+                            <a id="systemTools" href="" class="navData nav-link f-12"> TASK</a>
+                        </li>
+                        <li class="nav-item mt-1 ">
+                            <a href="" class="navData nav-link f-12">
+                                DASHBOARD
+                            </a>
+                        </li> 
+                        <li class="nav-item prof-tab mt-1 nav-top">
+                            <a href="" class="nav-link f-12">
+                                PROFILE
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center m-none" style="color:white;">
+                    <li class="nav-item mr-4 ml-4">
+                        <input type="text" class="form-control-sm form-control search-bar search-user"
+                            placeholder="Search">
+                    </li>
+                    <li class="nav-item dropdown ">
+                        <a rel="nofollow" style="width:20px" data-toggle="dropdown"
+                            class="navData mr-3 text-left nav-link btn-nav language">
+                            <span width="50px" height="50px" class="fa fa-bell"></span><span
+                                class="badge bg-red badge-corner">18</span>
+                        </a>
+                        <ul class="dropdown-menu ">
+                            <li><a href="" style="cursor:pointer" class="dropdown-item"> <span class="fa fa-e-mail"
+                                        width="30" height="30"></span> Welcome to POFSIS</a></li>
+                            <li class="text-right pr-2 c-blue"><a class="f-12" href="" style="cursor:pointer"> See
+                                    all</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item mt-1">
+                        <a href="" class="nav-link f-12">
+                            <span class="fa fa-shopping-cart" width="50" height="50"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="navbar navbar-expand-sm navbar-light sticky-top text-center" id="nav2-mobile">
+        <div class="col-4">
+            <div class="my-reviewer-icon">
+                <span class="fas fa-book-open"></span>
+            </div>
+            <div class="my-reviewer">
+                My Reviewer
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="my-reviewer-icon">
+                <span class="fas fa-user"></span>
+            </div>
+            <div class="my-reviewer">
+                My Personal
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="my-reviewer-icon">
+                <span class="fas fa-briefcase"></span>
+            </div>
+            <div class="my-reviewer">
+                My Business
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="fixed-bottom">
+        <nav class="navbar row text-center d-md-none pb-1 pt-2" id="bottom-menu">
+            <div class="col-3">
+                <div class="home-icon">
+                    <span class="fas fa-home"></span>
+                </div>
+                <span class="home-icon">
+                    Home
+                </span>
+            </div>
+            <div class="col-3">
+                <div class="task-icon">
+                    <span class="fas fa-file-alt"></span>
+                </div>
+                <span class="task-icon">
+                    Task
+                </span>
+            </div>
+            <div class="col-3">
+                <div class="profile-icon">
+                    <span class="fas fa-user"></span>
+                </div>
+                <span class="profile-icon">
+                    Profile
+                </span>
+            </div>
+            <div class="col-3">
+                <div class="chat-icon">
+                    <span class="fas fa-comment"></span>
+                </div>
+                <span class="chat-icon">
+                    Chat
+                </span>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 col-md-12">
+                <div class="img-container" id="profile-tab">
+                    <div class="profile-container">
+                        <div class="img-profile">
+                            <img class="img img-fluid" src="assets/image/collen1.jpeg" alt="">
+                            <div class="row username">
+                                <span class="text-white ml-3">John&nbsp;Paulo&nbsp;Moreno</span>
+                                <i class="text-white position">Professional&nbsp;-&nbsp;Young&nbsp;Professional</i>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="assets/image/cover.jpg" alt="" class="w-100 img-cover">
+                </div>
+                <div class="row pr-0">
+                    <div class="col-4 mt-5 s-panel" id="left-menu">
+                        <a class="left-menu mt-2 active row btn-sidebar btn-dashboard">
+                            <span class="left-border"></span>
+                            <span class="left-menu-icon fa fa-th-list"></span>
+                            <span class="left-menu-name"> Dashboard</span>
+                        </a>
+                        <a class="left-menu row btn-sidebar btn-video">
+                            <span class="left-border"></span>
+                            <span class="left-menu-icon fa fa-video-camera"></span>
+                            <span class="left-menu-name">Video</span>
+                        </a>
+                        <a class="left-menu row btn-sidebar btn-article">
+                            <span class="left-border"></span>
+                            <span class="left-menu-icon fa fa-newspaper-o"></span>
+                            <span class="left-menu-name"> Article</span>
+                        </a>
+                        <a class="left-menu row btn-sidebar btn-community">
+                            <span class="left-border"></span>
+                            <span class="left-menu-icon fa  fa-users"></span>
+                            <span class="left-menu-name">Community</span>
+                        </a>
+                        <a class="left-menu row btn-sidebar btn-taxUpdate">
+                            <span class="left-border"></span>
+                            <span class="left-menu-icon fa fa-file-text"></span>
+                            <span class="left-menu-name">Tax Update</span>
+                        </a>
+                        <a class="left-menu row btn-sidebar btn-calendar">
+                            <span class="left-border"></span>
+                            <span class="left-menu-icon fa fa-calendar-check-o"></span>
+                            <span class="left-menu-name"> Calendar</span>
+                        </a>
+                        <a class="left-menu row btn-sidebar btn-question">
+                            <span class="left-border"></span>
+                            <span class="left-menu-icon fa fa-pencil-square-o"></span>
+                            <span class="left-menu-name"> Question of the Day</a></span>
+                        </a>
+                    </div>
+                    <div class="bg-white neg-padding shadow-sm text-center d-flex w-100 d-md-none mt-2" id="mobile-menu2">
+                        <div class="col-3 p-0 btn-s">
+                            <button class=" btn-points text-color">My Points</button>
+                        </div>
+                        <div class="col-3 p-0 btn-s">
+                            <button class=" btn-taxQoutes text-color">Tax Quotes</button>
+                        </div>
+                        <div class="col-3 p-0 btn-s">
+                            <button class=" btn-throwback text-color ">Throwback</button>
+                        </div>
+                        <div class="col-3 p-0 btn-s">
+                            <button class=" btn-taxreminder text-color">Tax Reminder</button>
+                        </div>
+                    </div>
+                    <div class="my-points mt-3" hidden>
+                        <div class="card card-points">
+                            <div class="card-body">
+                                <span><img src="assets/image/points.png" alt="points" width="39.84" height="54.5">
+                                </span>
+                                <div class="float-right pt-3 points">0.00</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tax-qoutes mt-3" hidden>
+                        <div class="card card-points">
+                            <div class="card-body">
+                                <div class="float-left pt-2 points2">"A person doesn't know how much he has to be
+                                    thankful for until
+                                    he has to pay taxes on it."</div>
+                                <div class="float-right pt-3 points3"><b>-Anonymous</b></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="throwback mt-3" hidden>
+                        <div class="card card-points">
+                            <div class="card-body" id="container">
+                                <div id="objects">
+                                    <div class="object">
+                                        <img src="{{ asset('assets/image/Article 3.png') }}" class="img-throwback">
+                                    </div>
+                                    <div class="object">
+                                        <img src="{{ asset('assets/image/Article Image 2.png') }}"
+                                            class="img-throwback">
+                                    </div>
+                                    <div class="object">
+                                        <img src="{{ asset('assets/image/Article Image 4.png') }}"
+                                            class="img-throwback">
+                                    </div>
+                                    <div class="object">
+                                        <img src="{{ asset('assets/image/republic-acts.png') }}"
+                                            class="img-throwback">
+                                    </div>
+                                    <div class="object">
+                                        <img src="{{ asset('assets/image/RMC No. 98.png') }}" class="img-throwback">
+                                    </div>
+                                    <div class="object">
+                                        <img src="{{ asset('assets/image/Thumbnail 8.png') }}"
+                                            class="img-throwback">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="taxreminder mt-3" hidden>
+                        <div class="card card-points">
+                            <div class="card-body">
+                                <div class="float-left pt-2 points2"><b>Filing and payment</b> of 1701Q
+                                    (self-employed/professionals
+                                    ITR) for QE 30 June 2020."</div>
+                                <div class="text-center pt-3 points4">See more</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-8 col-sm-12" id="content-tab"> 
+                        <div class="div_article" hidden>
+                            <link rel="stylesheet" href="assets/css/dashboard/article.css">
+                            <div class="article m-none">
+                                <div class="card p-2 mt-3">
+                                    <div class="card-body pr-4 pl-4 pb-0 pt-0 ">
+                                        <div class="row p-0">
+                                            <div class="col-12 p-0">
+                                                <span><b>Article</b></span>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-3 ml-1">
+                                            <div class="col-xl-8 col-12 p-0 m-0 post-feed-main">
+                                                <div class="posting-feed1">
+                                                    <b>
+                                                        <div class="float leaft article">JUDGMENT ON COMPROMISE
+                                                            AGREEMENT</div>
+                                                    </b>
+                                                    <p>
+                                                        <div class="float leaft article1">Compromise Agreement are not
+                                                            contrary to law,
+                                                            morals, good customs, public order and public
+                                                            policy.…</div>
+                                                    </p>
+                                                    <div class="social-media pb-2">
+                                                        <li class=" fab fa-facebook-square" style="font-size:20px;"></i>
+                                                        <li class=" fab fa-twitter-square" style="font-size:20px;"></i>
+                                                        <li class=" fas fa-plus-square" style="font-size:20px;"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-12 p-0 m-0">
+                                                <div class="post-img mt-0 ml-4">
+                                                    <img class="" src="assets/image/Article Image 1.png" alt=""
+                                                        srcset=""></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wrapper d-md-none">
+                                <div class="card radius shadowDepth1">
+                                    <div class="card__image border-tlr-radius">
+                                        <img src="https://back.ww-cdn.com/resizeapi/410ce437794f6372999868c29e1542831d8dab35f4956c744ebafa4bf7801734/3200/-1/"
+                                            alt="image" class="border-tlr-radius">
+                                    </div>
+                                    <div class="card__content card__padding">
+                                        <div class="card__share">
+                                            <div class="card__social">
+                                                <a class="share-icon facebook"
+                                                    href="https://www.facebook.com/philtaxesofficial"><span
+                                                        class="fab fa-facebook-f"></span></a>
+                                                <a class="share-icon twitter"
+                                                    href="https://twitter.com/philtax_update"><span
+                                                        class="fab fa-twitter"></span></a>
+                                                <a class="share-icon googleplus" href="#"><span
+                                                        class="fas fa-plus"></span></a>
+                                            </div>
+
+                                            <a id="share" class="share-toggle share-icon" href="#"></a>
+                                        </div>
+                                        <article class="card__article">
+                                            <h2><a href="#">JUDGMENT ON COMPROMISE AGREEMENT</a></h2>
+
+                                            <p>The Duterte Administration Has Proven In The First Half Of Its Term That
+                                                It Can Initiate Serious
+                                                Policy Reforms And mplement ..</p>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wrapper d-md-none">
+                                <div class="card radius shadowDepth1">
+                                    <div class="card__image border-tlr-radius">
+                                        <img src="https://back.ww-cdn.com/resizeapi/410ce437794f6372999868c29e1542831d8dab35f4956c744ebafa4bf7801734/3200/-1/"
+                                            alt="image" class="border-tlr-radius">
+                                    </div>
+                                    <div class="card__content card__padding">
+                                        <div class="card__share">
+                                            <div class="card__social">
+                                                <a class="share-icon facebook"
+                                                    href="https://www.facebook.com/philtaxesofficial"><span
+                                                        class="fab fa-facebook-f"></span></a>
+                                                <a class="share-icon twitter"
+                                                    href="https://twitter.com/philtax_update"><span
+                                                        class="fab fa-twitter"></span></a>
+                                                <a class="share-icon googleplus" href="#"><span
+                                                        class="fas fa-plus"></span></a>
+                                            </div>
+
+                                            <a id="share" class="share-toggle share-icon" href="#"></a>
+                                        </div>
+                                        <article class="card__article">
+                                            <h2><a href="#">SEC REGISTERS FIRST ORDINARY CORPORATION
+                                                    WITH LESS THAN 5 INCORPORATORS</a></h2>
+
+                                            <p>The Securities and Exchange Commission
+                                                (SEC) has approved the registration of the first
+                                                corporation formed pursuant to the recently issued
+                                                Guidelines on the Number and Qualifications
+                                                of Incorporators under the</p>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center d-md-none mb-5">
+                                <div class="col">
+                                    <div class="spinner-grow spinner-grow-sm" role="status">
+                                        <span class="sr-only">Loading...</span>
+                                    </div>
+                                    <div class="spinner-grow spinner-grow-sm" role="status">
+                                        <span class="sr-only">Loading...</span>
+                                    </div>
+                                    <div class="spinner-grow spinner-grow-sm" role="status">
+                                        <span class="sr-only">Loading...</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <script src="assets/js/article.js"></script>
+                        </div>
+                        <div class="div_video" hidden>
+
+                            <div class="card1 mt-3">
+                                <div class="card-body m-none">
+                                    <div class="float-left question m-none mb-2"><b>Video</b></div>
+                                    <div class="vid-container m-none">
+                                        <iframe id="vid_frame"
+                                            src="https://www.youtube.com/embed/WsMF7KbaiXo?rel=0&showinfo=0&autohide=1"
+                                            frameborder="0" width="500" height="300"
+                                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture "
+                                            allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="video d-md-none">
+                                <iframe id="vid_frame"
+                                    src="https://www.youtube.com/embed/WsMF7KbaiXo?rel=0&showinfo=0&autohide=1"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture "
+                                    allowfullscreen></iframe>
+                            </div>
+                            <div class="video m-none">
+                                <div class="card mt-2 p-0">
+                                    <div class="card card-points ">
+                                        <div class="card-body text-center pl-1 pr-1" id="container">
+                                            <div id="objects-video">
+                                                <div class="object-video"><a href="javascript:void();"
+                                                        onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/RnrBcebzJzA'">
+                                                        <span class="vid-thumb"><img width="250" height="120"
+                                                                src="assets/image/T2.JPG" /></span></a>
+                                                    <div class="desc mt-3">NEW IRR ON CPD LAW</div>
+                                                </div>
+
+                                                <div class="object-video"><a href="javascript:void();"
+                                                        onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/oYXG1kqQNSk'">
+                                                        <span class="vid-thumb"><img width="250" height="120"
+                                                                src="assets/image/T1.JPG" /></span></a>
+                                                    <div class="desc mt-3">TAX AMNESTY ACT 2019</div>
+                                                </div>
+
+                                                <div class="object-video"><a href="javascript:void();"
+                                                        onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/5zezidjRkRA'">
+                                                        <span class="vid-thumb"><img width="250" height="120"
+                                                                src="assets/image/T3.JPG" /></span></a>
+                                                    <div class="desc mt-3">Weekly Tax Updates (Wk 07/2019)</div>
+                                                </div>
+
+                                                <div class="object-video"><a href="javascript:void();"
+                                                        onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/0gO7m0LNfzY'">
+                                                        <span class="vid-thumb"><img width="250" height="120"
+                                                                src="assets/image/T4.JPG" /></span></a>
+                                                    <div class="desc mt-3">Weekly Tax Updates (Wk 05/2019)</div>
+                                                </div>
+
+                                                <div class="object-video"><a href="javascript:void();"
+                                                        onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/Vrz06g7qKWw'">
+                                                        <span class="vid-thumb"><img width="250" height="120"
+                                                                src="assets/image/T5.JPG" /></span></a>
+                                                    <div class="desc mt-3">Weekly Tax Updates (02/2019)</div>
+                                                </div>
+
+                                                <div class="object-video"><a href="javascript:void();"
+                                                        onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/mFDyk_KVZYo'">
+                                                        <span class="vid-thumb"><img width="250" height="120"
+                                                                src="assets/image/T6.JPG" /></span></a>
+                                                    <div class="desc mt-3">Weekly Tax Updates (Wk 50/2018)</div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card mt-2 mb-5">
+                                    <div class="card card-points">
+                                        <div class="card-body text-center pl-3 pr-3" id="container">
+                                            <div id="objects-video">
+                                                <div class="object-video"><a href="javascript:void();"
+                                                        onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/Xqe6C7f4fe4'">
+                                                        <span class="vid-thumb"><img width="250" height="120"
+                                                                src="assets/image/T6.JPG" /></span></a>
+                                                    <div class="desc">Weekly Tax Updates (Wk 49/2018)</div>
+                                                </div>
+
+                                                <div class="object-video"><a href="javascript:void();"
+                                                        onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/ASzRV0PzRT0'">
+                                                        <span class="vid-thumb"><img width="250" height="120"
+                                                                src="assets/image/T7.JPG" /></span></a>
+                                                    <div class="desc">PHILTAXES SONA Full Highlights</div>
+                                                </div>
+
+                                                <div class="object-video"><a href="javascript:void();"
+                                                        onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/MYb4_sev4BY'">
+                                                        <span class="vid-thumb"><img width="250" height="120"
+                                                                src="assets/image/T8.JPG" /></span></a>
+                                                    <div class="desc">PHILTAXES SONA Tax Update</div>
+                                                </div>
+
+                                                <div class="object-video"><a href="javascript:void();"
+                                                        onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/q1aBvpeXAkc'">
+                                                        <span class="vid-thumb"><img width="250" height="120"
+                                                                src="assets/image/T9.JPG" /></span></a>
+                                                    <div class="desc">CTA disallows BIR from imposing....</div>
+                                                </div>
+
+                                                <div class="object-video"><a href="javascript:void();"
+                                                        onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/WsMF7KbaiXo'">
+                                                        <span class="vid-thumb"><img width="250" height="120"
+                                                                src="assets/image/T10.JPG" /></span></a>
+                                                    <div class="desc">Get Tax Update!</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card card-points d-md-none">
+                                <div class="card-body text-center pl-1 pr-1" id="container">
+                                    <div id="objects-video">
+                                        <div class="object-video"><a href="javascript:void();"
+                                                onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/RnrBcebzJzA'">
+                                                <span class="vid-thumb"><img width="250" height="120"
+                                                        src="assets/image/T2.JPG" /></span></a>
+                                            <div class="desc mt-3">NEW IRR ON CPD LAW</div>
+                                        </div>
+
+                                        <div class="object-video"><a href="javascript:void();"
+                                                onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/oYXG1kqQNSk'">
+                                                <span class="vid-thumb"><img width="250" height="120"
+                                                        src="assets/image/T1.JPG" /></span></a>
+                                            <div class="desc mt-3">TAX AMNESTY ACT 2019</div>
+                                        </div>
+
+                                        <div class="object-video"><a href="javascript:void();"
+                                                onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/5zezidjRkRA'">
+                                                <span class="vid-thumb"><img width="250" height="120"
+                                                        src="assets/image/T3.JPG" /></span></a>
+                                            <div class="desc mt-3">Weekly Tax Updates (Wk 07/2019)</div>
+                                        </div>
+
+                                        <div class="object-video"><a href="javascript:void();"
+                                                onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/0gO7m0LNfzY'">
+                                                <span class="vid-thumb"><img width="250" height="120"
+                                                        src="assets/image/T4.JPG" /></span></a>
+                                            <div class="desc mt-3">Weekly Tax Updates (Wk 05/2019)</div>
+                                        </div>
+
+                                        <div class="object-video"><a href="javascript:void();"
+                                                onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/Vrz06g7qKWw'">
+                                                <span class="vid-thumb"><img width="250" height="120"
+                                                        src="assets/image/T5.JPG" /></span></a>
+                                            <div class="desc mt-3">Weekly Tax Updates (02/2019)</div>
+                                        </div>
+
+                                        <div class="object-video"><a href="javascript:void();"
+                                                onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/mFDyk_KVZYo'">
+                                                <span class="vid-thumb"><img width="250" height="120"
+                                                        src="assets/image/T6.JPG" /></span></a>
+                                            <div class="desc mt-3">Weekly Tax Updates (Wk 50/2018)</div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card mt-2 mb-5 d-md-none">
+                                <div class="card card-points">
+                                    <div class="card-body text-center pl-3 pr-3" id="container">
+                                        <div id="objects-video">
+                                            <div class="object-video"><a href="javascript:void();"
+                                                    onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/Xqe6C7f4fe4'">
+                                                    <span class="vid-thumb"><img width="250" height="120"
+                                                            src="assets/image/T6.JPG" /></span></a>
+                                                <div class="desc">Weekly Tax Updates (Wk 49/2018)</div>
+                                            </div>
+
+                                            <div class="object-video"><a href="javascript:void();"
+                                                    onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/ASzRV0PzRT0'">
+                                                    <span class="vid-thumb"><img width="250" height="120"
+                                                            src="assets/image/T7.JPG" /></span></a>
+                                                <div class="desc">PHILTAXES SONA Full Highlights</div>
+                                            </div>
+
+                                            <div class="object-video"><a href="javascript:void();"
+                                                    onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/MYb4_sev4BY'">
+                                                    <span class="vid-thumb"><img width="250" height="120"
+                                                            src="assets/image/T8.JPG" /></span></a>
+                                                <div class="desc">PHILTAXES SONA Tax Update</div>
+                                            </div>
+
+                                            <div class="object-video"><a href="javascript:void();"
+                                                    onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/q1aBvpeXAkc'">
+                                                    <span class="vid-thumb"><img width="250" height="120"
+                                                            src="assets/image/T9.JPG" /></span></a>
+                                                <div class="desc">CTA disallows BIR from imposing....</div>
+                                            </div>
+
+                                            <div class="object-video"><a href="javascript:void();"
+                                                    onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/WsMF7KbaiXo'">
+                                                    <span class="vid-thumb"><img width="250" height="120"
+                                                            src="assets/image/T10.JPG" /></span></a>
+                                                <div class="desc">Get Tax Update!</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <script src="/js/video.js"></script>
+
+                        </div>
+                        <div class="div_taxupdate" hidden>
+                            <div class="tax-update m-none">
+                                <div class="card p-2 mt-3">
+                                    <div class="card-body pr-4 pl-4 pb-0 pt-0 ">
+                                        <div class="row p-0">
+                                            <div class="col-12 p-0">
+                                                <span><b>Tax Update</b></span>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-3 ml-1">
+                                            <div class="col-xl-8 col-12 p-0 m-0 post-feed-main">
+                                                <div class="posting-feed1">
+                                                    <b><div class="float leaft article">RMC No. 98-2019 (Regulation and 
+                                                        Organization of Islamic Banks)</div></b>
+                                                    <p><div class="float leaft article1">Publishes the full text of Republic Act No. 11439 entitled 
+                                                        “An Act Providing for the Regulation and Organization 
+                                                        of Islamic Banks”
+                                                        policy.…</div></p>
+                                                        <div class="social-media pb-2">
+                                                    <li class=" fab fa-facebook-square" style="font-size:20px;"></i>
+                                                    <li class=" fab fa-twitter-square" style="font-size:20px;"></i> 
+                                                    <li class=" fas fa-plus-square" style="font-size:20px;"></i> 
+                                                    </div>                                                                                   
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-12 p-0 m-0">
+                                                <div class="post-img mt-2 ml-4">
+                                                        <img class="" src="assets/image/RMC No. 98-2019.jpg" alt="" srcset=""></span>
+                                                    </div> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="wrapper d-md-none">
+                                    <div class="card radius shadowDepth1">
+                                        <div class="card__image border-tlr-radius">
+                                            <img src="https://www.bworldonline.com/wp-content/uploads/2019/02/BIR-building-022619.jpg" alt="image" class="border-tlr-radius">
+                                        </div>
+                                        <div class="card__content card__padding">
+                                            <div class="card__share">
+                                                <div class="card__social">  
+                                                    <a class="share-icon facebook" href="https://www.facebook.com/philtaxesofficial"><span class="fab fa-facebook-f"></span></a>
+                                                    <a class="share-icon twitter" href="https://twitter.com/philtax_update"><span class="fab fa-twitter"></span></a>
+                                                    <a class="share-icon googleplus" href="#"><span class="fas fa-plus"></span></a>
+                                                </div>
+    
+                                                <a id="share" class="share-toggle share-icon" href="#"></a>
+                                            </div>
+                                            <article class="card__article">
+                                                <h2><a href="#">RMC No. 98-2019 (Regulation and Organization of Islamic Banks)</a></h2>
+    
+                                                <p>Publishes the full text of Republic Act No. 11439 entitled “An Act Providing for the Regulation and Organization of Islamic Banks”</p>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="wrapper d-md-none">
+                                    <div class="card radius shadowDepth1">
+                                        <div class="card__image border-tlr-radius">
+                                            <img src="https://thecorpusjuris.com/img/headers/republic-acts.jpg" alt="image" class="border-tlr-radius">
+                                        </div>
+                                        <div class="card__content card__padding">
+                                            <div class="card__share">
+                                                <div class="card__social">  
+                                                    <a class="share-icon facebook" href="https://www.facebook.com/philtaxesofficial"><span class="fab fa-facebook-f"></span></a>
+                                                    <a class="share-icon twitter" href="https://twitter.com/philtax_update"><span class="fab fa-twitter"></span></a>
+                                                    <a class="share-icon googleplus" href="#"><span class="fas fa-plus"></span></a>
+                                                </div>
+    
+                                                <a id="share" class="share-toggle share-icon" href="#"></a>
+                                            </div>
+                                            <article class="card__article">
+                                                <h2><a href="#">RMC No. 97-2019 (Several Republic Acts)</a></h2>
+    
+                                                <p>Publishes the full text of several Republic Acts</p>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-center d-md-none mt-2 mb-5">
+                                    <div class="col pb-3">
+                                        <div class="spinner-grow spinner-grow-sm" role="status">
+                                            <span class="sr-only">Loading...</span>
+                                        </div>
+                                        <div class="spinner-grow spinner-grow-sm" role="status">
+                                            <span class="sr-only">Loading...</span>
+                                        </div>    
+                                        <div class="spinner-grow spinner-grow-sm" role="status">
+                                            <span class="sr-only">Loading...</span>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <script src="/js/article.js"></script>
+                            </div>
+                        <div class="div_quiz" hidden>
+                            <div class="quiz m-none">
+                                    <div class="card p-2 mt-3" >
+                                        <div class="card-body pr-4 pl-4 pb-0 pt-0 ">
+                                            <div class="row p-0">
+                                                <div class="col-12 p-0">
+                                                    <span><b>Question of the Day!</b></span>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-3 ml-1">
+                                                <div class="col-xl-8 col-12 p-0 m-0 post-feed-main">
+                                                    <div class="posting-feed1">
+                                                        <b><div class="float-left date">October 27, 2020 </div></b>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-4 col-12 p-0 m-0">
+                                                    <div class="post-img">
+                                                            Timer Coming soon!
+                                                    </div> 
+                                                </div>
+                                                <div class="question mt-4"><p>Which Company Acquired Instagram For US$1 Billion In 2012?</p></div>
+                                            </div>
+                                            <div class="row text-center">
+                                                <div class="col-6 p-3 text-center">
+                                                    <button type="button" class="btn btn-primary1 btn-wrong">Amazon</button>
+                                                    <button type="button" class="btn btn-primary1 btn-answer">Facebook</button>
+                                                </div>
+                                                <div class="col-6 p-3 text-center">
+                                                    <button type="button" class="btn btn-primary1 btn-wrong">Google</button>
+                                                    <button type="button" class="btn btn-primary1 btn-wrong">Microsoft</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="title mt-3">Previous Question</div>
+                                    <div id="previous-question">
+                                        <div class="previous-questions text-center">
+                                            <img src="assets/svg/nov-16.svg" alt="">
+                                        </div>
+                                        <div class="previous-questions text-center">
+                                            <img src="assets/svg/nov-17.svg" alt="">
+                                        </div>
+                                        <div class="previous-questions text-center">
+                                            <img src="assets/svg/nov-18.svg" alt="">
+                                        </div>
+                                        <div class="previous-questions text-center">
+                                            <img src="assets/svg/nov-19.svg" alt="">
+                                        </div>
+                                        <div class="previous-questions text-center">
+                                            <img src="assets/svg/nov-20.svg" alt="">
+                                        </div>
+                                        <div class="previous-questions text-center mt-2">
+                                            <img src="assets/svg/nov-21.svg" alt="">
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div class="quiz d-md-none">
+                                    <div class="title mt-3 mb-2 ml-2">Question Of The Day</div>
+    
+                                        <div class="card-quiz">
+                                            <div class="questionoftheday">
+                                                <span class="date-now">September 21, 2020</span>
+                                                <span class="day-now    ">Today</span>
+                                            </div>
+                                                <span class="timer-now" style="float-right">Timer</span>
+                                            <div class="question-today text-center">
+                                                <p>Which Company Acquired Instagram For US$1 Billion In 2012?</p>
+                                                </div>
+                                                <button type="button" class="btn btn-primary1 btn-wrong">Amazon</button>
+                                                <button type="button" class="btn btn-primary1 btn-answer">Facebook</button>
+                                                <button type="button" class="btn btn-primary1 btn-wrong">Google</button>
+                                                <button type="button" class="btn btn-primary1 btn-wrong">Microsoft</button>
+                                            </div>
+    
+    
+                                    <div class="title mt-3 mb-2 ml-2">Previous Question</div>
+                                    <div id="previous-question">
+                                        <div class="previous-questions text-center">
+                                            <img src="assets/svg/nov-16.svg" alt="">
+                                        </div>
+                                        <div class="previous-questions text-center">
+                                            <img src="assets/svg/nov-17.svg" alt="">
+                                        </div>
+                                        <div class="previous-questions text-center">
+                                            <img src="assets/svg/nov-18.svg" alt="">
+                                        </div>
+                                        <div class="previous-questions text-center">
+                                            <img src="assets/svg/nov-19.svg" alt="">
+                                        </div>
+                                        <div class="previous-questions text-center">
+                                            <img src="assets/svg/nov-20.svg" alt="">
+                                        </div>
+                                        <div class="previous-questions text-center mt-2">
+                                            <img src="assets/svg/nov-21.svg" alt="">
+                                        </div>
+                                    </div>
+                                    </div>
+    
+                                    <script src = "js/quiz.js"></script>
+                            </div>
+                        <div class="div_community" hidden>
+                            <div class="community m-none">
+                                <div class="card mt-3">
+
+                                    <div class="row p-3">
+                                        <div class="col-6 pc">
+                                            <div class="sample float-left mt-1">
+                                                <h2>Philtaxes Community</h2>
+                                            </div>
+                                        </div>
+                                        <div class="post-img mt-3 col-6">
+                                            <div class="search-box float-right">
+                                                <input type="text" id="searchbar" placeholder="Search">
+                                                <li class=" fas fa-search" style="font-size:20px;"></li>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card mt-2">
+                                    <div class="card-body p-0">
+                                        <div class="d-flex flex-column justify-content-between bg-white">
+                                            <div class="d-flex">
+                                                <div class="flex-fill border col-xl-4 p-3 text-center">
+                                                    <i class="fas fa-photo-video m-0 icon-color"></i><span
+                                                        class="post-text"> &nbsp;
+                                                        Photo/Video</span>
+                                                </div>
+                                                <div class="flex-fill border col-xl-4 p-3 text-center">
+                                                    <i class="fas fa-file-medical m-0 icon-color"></i><span
+                                                        class="post-text"> &nbsp; Add
+                                                        File</span>
+                                                </div>
+                                                <div class="flex-fill border col-xl-4 p-3 text-center">
+                                                    <i class="fas fa-list m-0 icon-color "></i><span class="post-text">
+                                                        &nbsp; Option</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-body">
+                                            <img src="assets/image/collen1.jpeg" alt="image" style="">
+                                            <div class="form-submit ">
+                                                <p>Write Something about yourself ...</p>
+                                            </div>
+                                            <div class="more"><i class="fas fa-ellipsis-v float-right"></i></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card mt-2">
+                                    <div class="card-body">
+                                        <div class="content">
+                                            <div class="">
+                                                <div class="form">
+                                                    <div class="post">
+                                                        <div class="row">
+                                                            <div class="col-1 p-1 pl-3 info">
+                                                                <img src="assets/image/collen.jpg" alt="" class="name">
+                                                            </div>
+                                                            <div class="col-11 p-1 pl-3 name">
+                                                                <div class="text" style=""><b>Niel Collen Macaraig</b>
+                                                                </div>
+                                                                <div class="f-11">10:00 AM, TODAY</div>
+                                                                
+                                                            </div>
+                                                        </div>
+                                                        <div class="post-body">
+                                                            <p>Extraordinary Day!</p>
+                                                            <div class="post-bottom">
+                                                                <div class="row text-left">
+                                                                    <div class="col-2 mt-2">
+                                                                        <div><i class="far fa-thumbs-up"></i>&nbsp;25k
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-2 mt-2">
+                                                                        <div><i class="far fa-comment-alt"></i>&nbsp;2k
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-8 mt-2">
+                                                                        <div><i class="fas fa-share"></i></i>&nbsp;4k
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="comment">
+                                                <div class="comment-box">
+                                                    <div class="comment-header">
+                                                        <div class="row mb-2">
+                                                            <div class="close">
+                                                                <i class="fas fa-times float-right"></i>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-10 float-left">
+                                                                <b>
+                                                                    <p class="pl-3">Create Post</p>
+                                                                </b>
+                                                            </div>
+                                                            <div class="col-2 float-right">
+                                                                <b>
+                                                                    <p style="color:#00B1FF">Post</p>
+                                                                </b>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="comment-body">
+                                                        <div class="row">
+                                                            <div class="col-12" id="post_content">
+                                                                <img alt="profile picture"
+                                                                    class="col-4 img-border my-auto"
+                                                                    src="assets/image/collen1.jpeg">
+                                                                <div class="textarea_wrap">
+                                                                    <textarea class="col-8 txt-area"
+                                                                        placeholder="Write Something about yourself ..."></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="comment-bottom mt-4">
+                                                        <div
+                                                            class="d-flex flex-column justify-content-between bg-white">
+                                                            <div class="d-flex">
+                                                                <div
+                                                                    class="flex-fill border-icon col-xl-4 p-2 text-center">
+                                                                    <i
+                                                                        class="fas fa-photo-video m-0 icon-color"></i>&nbsp;&nbsp;Photo/Video
+                                                                </div>
+                                                                <div
+                                                                    class="flex-fill border-icon col-xl-4 p-2 text-center">
+                                                                    <i
+                                                                        class="fas fa-file-medical m-0 icon-color"></i>&nbsp;&nbsp;Add
+                                                                    File
+                                                                </div>
+                                                                <div
+                                                                    class="flex-fill border-list col-xl-4 p-2 text-center">
+                                                                    <i
+                                                                        class="fas fa-list m-0 icon-color "></i>&nbsp;&nbsp;Option
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card d-md-none mt-2">
+                                <div class="card-body p-0">
+                                    <div class="d-flex flex-column justify-content-between bg-white">
+                                        <div class="d-flex">
+                                            <div class="flex-fill border col-xl-4 p-3 text-center">
+                                                <i class="fas fa-photo-video m-0 icon-color"></i><span
+                                                    class="post-text"> &nbsp;
+                                                    Photo/Video</span>
+                                            </div>
+                                            <div class="flex-fill border col-xl-4 p-3 text-center">
+                                                <i class="fas fa-file-medical m-0 icon-color"></i><span
+                                                    class="post-text"> &nbsp; Add
+                                                    File</span>
+                                            </div>
+                                            <div class="flex-fill border col-xl-4 p-3 text-center">
+                                                <i class="fas fa-list m-0 icon-color "></i><span class="post-text">
+                                                    &nbsp; Option</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-body-mobile">
+                                        <img src="assets/image/collen1.jpeg" alt="image" style="">
+                                        <div class="form-submit-mobile">
+                                            <p>What’s on your mind?</p>
+                                        </div>
+                                        <div class="more"><i class="fas fa-ellipsis-v float-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="loading">
+                                <div id="content">
+                                    <div class="skeleton">
+                                        <div class="skeleton-wrapper">
+                                            <div class="skeleton-wrapper-inner">
+                                                <div class="skeleton-wrapper-body">
+                                                    <div class="skeleton-avatar"></div>
+                                                    <div class="skeleton-author"></div>
+                                                    <div class="skeleton-label"></div>
+                                                    <div class="skeleton-content-1"></div>
+                                                    <div class="skeleton-content-2"></div>
+                                                    <div class="skeleton-content-3"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="content">
+                                    <div class="skeleton">
+                                        <div class="skeleton-wrapper">
+                                            <div class="skeleton-wrapper-inner">
+                                                <div class="skeleton-wrapper-body">
+                                                    <div class="skeleton-avatar"></div>
+                                                    <div class="skeleton-author"></div>
+                                                    <div class="skeleton-label"></div>
+                                                    <div class="skeleton-content-1"></div>
+                                                    <div class="skeleton-content-2"></div>
+                                                    <div class="skeleton-content-3"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="content">
+                                    <div class="skeleton">
+                                        <div class="skeleton-wrapper">
+                                            <div class="skeleton-wrapper-inner">
+                                                <div class="skeleton-wrapper-body">
+                                                    <div class="skeleton-avatar"></div>
+                                                    <div class="skeleton-author"></div>
+                                                    <div class="skeleton-label"></div>
+                                                    <div class="skeleton-content-1"></div>
+                                                    <div class="skeleton-content-2"></div>
+                                                    <div class="skeleton-content-3"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <script src="/js/community.js"></script>
+
+                        </div>
+                        <div class="div_taxcalendar" hidden> 
+                            <div class="calendar mt-3">
+                                <div class="tax-calendar pl-3 pt-2"><b>Tax Calendar</b></div>
+                                <div class="month">
+                                    <i class="fas fa-angle-left prev"></i>
+                                    <div class="date">
+                                        <h1></h1>
+                                        <p></p>
+                                    </div>
+                                    <i class="fas fa-angle-right next icon"></i>
+                                </div>
+                                <div class="weekdays">
+                                    <div>Sun</div>
+                                    <div>Mon</div>
+                                    <div>Tue</div>
+                                    <div>Wed</div>
+                                    <div>Thu</div>
+                                    <div>Fri</div>
+                                    <div>Sat</div>
+                                </div>
+                                <div class="days"></div>
+                            </div> 
+                            <script>
+                                function on() {
+                                    document.getElementById("overlay").style.display = "block";
+                                }
+
+                                function off() {
+                                    document.getElementById("overlay").style.display = "none";
+                                }
+                            </script>
+                            <script src="assets/js/dates.js"></script> 
+                        </div>
+                        <div class="div_dashboard" hidden>
+                            <div class="card post p-0 mt-3">
+                                <div class="card-body">
+                                    <div class="float-left question"><b>Question Of The Day!</b></div>
+                                    <div class="float-left pt-2 question1">"A person doesn't know how much he has to be
+                                        thankful
+                                        for until he has to pay taxes on it."</div>
+                                    <div class="float-right">
+                                        <a href="" class="btn btn-start mt-2">Start</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mt-3 p-2">
+                                <div class="card-body pr-4">
+                                    <div class="row p-0">
+                                        <div class="col-12 p-0 aaa">
+                                            <span class="title"><b>News</b></span>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3 ml-1">
+                                        <div class="col-xl-8 col-12 p-0 m-0 post-feed-main">
+                                            <div class="posting-feed">
+                                                <b>
+                                                    <div class="float leaft news">Infra Modernization Being Implemented
+                                                        ‘On
+                                                        Time
+                                                        And On Budget’–Dominguez</div>
+                                                </b>
+                                                <p>
+                                                    <div class="float leaft tax-news1">The Duterte Administration Has
+                                                        Proven
+                                                        In
+                                                        The First Half Of Its Term That It Can Initiate Serious Policy
+                                                        Reforms
+                                                        And Implement ...</div>
+                                                </p>
+                                                <p>
+                                                    <div class="float leaft news2">4 Day ago</div>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4 col-12 p-0 m-0">
+                                            <div class="post-img  mt-0">
+                                                <img class="" src="assets/image/news.jpg" alt=""
+                                                    srcset=""></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mt-3 p-2 pb-5">
+                                <div class="card-body pr-4 pl-4 pb-0 ">
+                                    <div class="row p-0">
+                                        <div class="col-12 p-0 aaa">
+                                            <span class="title"><b>Tax Update</b></span>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3 ml-1">
+                                        <div class="col-xl-8 col-12 p-0 m-0 post-feed-main">
+                                            <div class="posting-feed1">
+                                                <b>
+                                                    <div class="float leaft tax-update">RMC No. 98-2019 (Regulation And
+                                                        Organization Of Islamic Banks)</div>
+                                                </b>
+                                                <p>
+                                                    <div class="float leaft tax-update1">Publishes The Full Text Of
+                                                        Republic
+                                                        Act
+                                                        No. 11439 Entitled “An Act Providing For The Regulation And
+                                                        Organization
+                                                        Of Islamic Banks” .</div>
+                                                </p>
+                                                <div class="float leaft tax update2">4 Day ago</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4 col-12 p-0 m-0">
+                                            <div class="post-img mt-1">
+                                                <img class="" src="assets/image/tax update.jpg" alt=""
+                                                    srcset=""></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="pt-5 pb-5"></div> -->
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-3 p-0 mt-3" id="right-tab">
+                <span>My Points</span>
+                <div class="card card-points">
+                    <div class="card-body">
+                        <span><img src="assets/image/points.png" alt="points" width="39.84" height="54.5"> </span>
+                        <div class="float-right pt-3 points">0.00</div>
+                    </div>
+                </div>
+                <hr>
+
+                <span>Tax Reminder</span>
+                <div class="card card-points">
+                    <div class="card-body">
+                        <div class="float-left pt-2 points2"><b>Filing and payment</b> of 1701Q
+                            (self-employed/professionals
+                            ITR) for QE 30 June 2020."</div>
+                        <div class="text-center pt-3 points4">See more</div>
+                    </div>
+                </div>
+                <hr>
+                <span>Tax Quotes</span>
+                <div class="card card-points">
+                    <div class="card-body">
+                        <div class="float-left pt-2 points2">"A person doesn't know how much he has to be thankful for
+                            until
+                            he has to pay taxes on it."</div>
+                        <div class="float-right pt-3 points3"><b>-Anonymous</b></div>
+                    </div>
+                </div>
+
+                <hr>
+                <span>Throwback Tax Day</span>
+                <div class="card card-points">
+                    <div class="card-body" id="container">
+                        <div id="objects">
+                            <div class="object">
+                                <img src="assets/image/Article 3.png" class="img-throwback">
+                            </div>
+                            <div class="object">
+                                <img src="assets/image/Article Image 2.png" class="img-throwback">
+                            </div>
+                            <div class="object">
+                                <img src="assets/image/Article Image 4.png" class="img-throwback">
+                            </div>
+                            <div class="object">
+                                <img src="assets/image/republic-acts.png" class="img-throwback">
+                            </div>
+                            <div class="object">
+                                <img src="assets/image/RMC No. 98.png" class="img-throwback">
+                            </div>
+                            <div class="object">
+                                <img src="assets/image/Thumbnail 8.png" class="img-throwback">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <link rel="stylesheet" href="css/dashboard/profile.css">
+</body>
+
+</html>
